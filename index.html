@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <section id="section">
+        <div class="palette">
+            <div><h3>Color palette</h3></div>
+            <div class="palette-box">
+                <p class="color p1" onclick="setBgColor(1)"></p>
+                <p class="color p2" onclick="setBgColor(2)"></p>
+                <p class="color p3" onclick="setBgColor(3)"></p>
+                <p class="color default" onclick="setBgColor(0)"></p>
+            </div> 
+        </div> 
+       <div class="head" onclick="gotoForm()"><h1>Welcome to Tax Calculator !!!</h1></div>
+       <div>
+         <table class="myWrapTable">
+            <tbody>
+                <tr id="tablehead">
+                    <td><strong>Income Tax Slabs Under New Tax Regime 2023</strong></td>
+                    <td class="right"><strong>Tax Rates</strong></td>
+                </tr>
+                <tr>
+                    <td>O to Rs 3 lakh</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>Rs 3 lakh to Rs 6 lakh</td>
+                    <td class="right">5%</td>
+                </tr>
+                <tr>
+                    <td>Rs 6 lakh to Rs 9 lakh</td>
+                    <td class="right">10%</td>
+                </tr>
+                <tr>
+                    <td>Rs 9 lakh to Rs 12 lakh</td>
+                    <td class="right">15%</td>
+                </tr>
+                <tr>
+                    <td>Rs 12 lakh to Rs 15 lakh</td>
+                    <td class="right">20%</td>
+                </tr>
+                <tr>
+                    <td>Income above Rs 15 lakh</td>
+                    <td class="right">30%</td>
+                </tr>
+            </tbody>
+        </table>
+       </div>
+
+
+       <div class="container">
+        <div class="header">
+            <h2>Information Form</h2>
+        </div>
+
+        <form action="" class="form" id="form">
+            <div class="form-control">
+                <label>Your Name</label>
+                <input type="text" name="" id="username" placeholder="Enter Your Name" autocomplete="off" required>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Basic Salary</label>
+                <input type="number"  min="0" id="bs" placeholder="Enter Your Basic Salary" autocomplete="off" required >
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>House Rent Allowance(HRA)</label>
+                <input type="number"  min="0" id="hra" placeholder="Enter HRA amount" autocomplete="off" required>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Travel Allowance(TA)</label>
+                <input type="number"  min="0" id="ta" placeholder="Enter TA amount"autocomplete="off" required>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Dearness Allowance(DA)</label>
+                <input type="number"  min="0" id="da" placeholder="Enter DA amount" autocomplete="off" required>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Standard Deductions</label>
+                <input type="number"  min="0" id="sd" placeholder="Enter deduction amount" autocomplete="off" required>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </div>
+
+    <table id="output" class="myWrapTable Tab2">
+        <thead>
+            <td class="headerTable">Name</td>
+            <td class="headerTable right">Basic Salary</td>
+            <td class="headerTable right">HRA</td>
+            <td class="headerTable right">TA</td>
+            <td class="headerTable right">DA</td>
+            <td class="headerTable right">SD</td>
+            <td class="headerTable right">Tax</td>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </section>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
