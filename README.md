@@ -1,5 +1,9 @@
+## Description 
 
+This is a Web application for Tax Calculation under 2023 regime
 
+## Visit App here 
+https://whitedevil29-tax-calculator.netlify.app/
 
 ## App Visuals 
 
